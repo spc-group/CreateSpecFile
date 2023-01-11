@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 #----------------------------------------------------------------------------
 # Name:              CreateSpecFile.py
-# version:           1.0.7
-# last updated:      06/20/2019 GES
-# Purpose:           Convert .#### data to file that can be read by pymca
+# version:           1.0.8
+# last updated:      01/10/2023 GES
+# Purpose:           Convert .#### data to file that can be read by PyMca
 #
 # Author:            George Sterbinsky
 # Acknowledgments:   Several functions are based on Plot_4idc_data.py by Yong Choi             
@@ -46,7 +46,7 @@ class MyFrame(wx.Frame):
         
         #Sizers
         vbox = wx.BoxSizer(wx.VERTICAL)   # one sizer to hold them all
-        sb = wx.StaticBox(panel, label='Create pymca readable file from .#### files')  #decorative box with title for panel
+        sb = wx.StaticBox(panel, label='Create PyMca readable file from .#### files')  #decorative box with title for panel
         titlefgs = wx.StaticBoxSizer(sb, wx.VERTICAL)   # put sb in sizer
         fgs = wx.FlexGridSizer(3, 3, 5, 5)              # sizer for file info and controls
         #timerfgs = wx.FlexGridSizer(1, 4, 5, 5)         # sizer for auto update options
@@ -663,5 +663,5 @@ def CreateSpecFile(DataPath,WritePath,newFileName):
 #----------------------------------------------------------------------------
 if __name__ == '__main__':
     app = wx.App()    # Create an instance of the application class
-    MyFrame(None, title='Create spec file (GES)')
+    MyFrame(None, title='Create spec file')
     app.MainLoop()    # Tell it to start processing events
