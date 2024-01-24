@@ -29,11 +29,11 @@ import time
 # ***Create GUI***
 
 # Create a new frame class, derived from the wxPython Frame.
-class MyFrame(wx.Frame):
+class CSFframe(wx.Frame):
     
     
     def __init__(self, parent, title):
-        super(MyFrame, self).__init__(parent, title=title)
+        super(CSFframe, self).__init__(parent, title=title)
             #, size=(500, 200))
         
         self.InitUI()
@@ -663,5 +663,5 @@ def CreateSpecFile(DataPath,WritePath,newFileName):
 #----------------------------------------------------------------------------
 if __name__ == '__main__':
     app = wx.App()    # Create an instance of the application class
-    MyFrame(None, title='Create spec file')
+    CSFframe(None, title='Create spec file')
     app.MainLoop()    # Tell it to start processing events
