@@ -2,7 +2,7 @@
 #----------------------------------------------------------------------------
 # Name:              CreateSpecFile.py
 # version:           1.0.8
-# last updated:      01/10/2023 GES
+# last updated:      01/23/2024 GES
 # Purpose:           Convert .#### data to file that can be read by PyMca
 #
 # Author:            George Sterbinsky
