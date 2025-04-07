@@ -312,8 +312,8 @@ def Get9bmDateTime(datafilename):
 #----------------------------------------------------------------------------
 # gets names of data coulmns from 4IDC data file and returns them in a list
 def Get4idcColNames(datafilename):
-    f = open(str(datafilename), 'r') #open file
-    list_ColName=[]   #create empty list
+    f = open(str(datafilename), 'r') # open file
+    list_ColName=[]   # create empty list
     for line in f:
         if line.startswith('#'):
             line = line.replace('\r','')
@@ -554,7 +554,7 @@ def CreateSpecFile(DataPath,WritePath,newFileName):
             dt = Get9bmDateTime(str(ScanList[j]))
         TimeList[j] = dt  # place dt in list
         
-    #create a tuple with file name and timestamp 
+    # create a tuple with file name and timestamp 
     fl = [(ScanList[j], TimeList[j]) for j in range(len(ScanList))]
     
     # sort the tuple by date and time    
@@ -562,8 +562,9 @@ def CreateSpecFile(DataPath,WritePath,newFileName):
     
     # create .spec file and write file header to it
     Newfile = str(WritePath)+'/'+str(newFileName) #Newfile = DataPath+'/AllData.spec'
-    #nf = open(str(Newfile), 'wb') #recall that 'wb' was necessary for windows, needs testing
-    nf = open(str(Newfile), 'w') #changed to 'w' to correct python 3 error
+    nf = open(str(Newfile), 'w', newline='\n')
+    # open file for writing, newline='\n' needed to write pymca compatible files on windows
+    # in python2, that issue was solvbed by using 'wb' instead of 'w', but that leads to an error in python3
     nf.write('#F '+str(newFileName)+'\n')
     nf.write('#E '+str(time.time())+'\n')
     nf.write('#D '+datetime.datetime.now().ctime()+'\n')
