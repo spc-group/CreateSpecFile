@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 #----------------------------------------------------------------------------
 # Name:              CreateSpecFile.py
-# version:           1.0.8
-# last updated:      01/23/2024 GES
+# version:           1.0.9
 # Purpose:           Convert .#### data to file that can be read by PyMca
 #
 # Author:            George Sterbinsky
 # Acknowledgments:   Several functions are based on Plot_4idc_data.py by Yong Choi             
 #
 # Created:           2015
+# Udated:            2025
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 
