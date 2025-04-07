@@ -8,7 +8,7 @@
 # Acknowledgments:   Several functions are based on Plot_4idc_data.py by Yong Choi             
 #
 # Created:           2015
-# Udated:            2025
+# Updated:           2025
 #----------------------------------------------------------------------------
 #----------------------------------------------------------------------------
 
